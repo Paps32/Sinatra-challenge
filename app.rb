@@ -16,7 +16,14 @@ get '/secret/please' do
   'okay then friend'
 end
 
-get '/cat' do
-    @cat_names = ["Amigo", "Oscar", "Viking"].sample
+get '/random-cat' do
+    @cat_name = ["Amigo", "Oscar", "Viking"].sample
     erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @cat_name = params[:name]
+  @cat_age = params[:age]
+  erb(:index)
 end
