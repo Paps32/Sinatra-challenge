@@ -15,3 +15,7 @@ end
 get '/secret/please' do
   'okay then friend'
 end
+
+get '/cat' do
+  "<img src='http://bit.ly/1eze8aE'>"
+end
